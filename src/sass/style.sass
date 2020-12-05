@@ -1,0 +1,207 @@
+$titles_size:  28px
+$title_font: 'Lateef', cursive
+
+body
+    background-color: #000000
+    color: #ffffff
+    font-family: 'Open Sans', sans-serif
+
+footer
+    padding-bottom: 57px
+
+a
+    color: #ffffff
+
+.animate_img
+    transition: transform .5s, box-shadow .5s
+    &:hover
+        transform: scale(1.1)
+        box-shadow: 0px 0px 16px #090909
+
+= title
+    width: 100%
+    text-align: center
+    font-size: $titles_size
+    font-family: $title_font
+    text-align: center
+
+= descr
+    width: 73.5%
+    margin: 0 auto
+    font-size: 18px
+    line-height: 25px
+    color: #808080
+    text-align: center
+
+= text_position_buttom
+    display: flex
+    align-items: flex-end
+    margin-bottom: 12px
+
+.container
+    max-width: 1156px
+    margin: 0 auto
+    padding: 0 15px 0 15px
+    &_nav
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 43px
+        margin-bottom: 270px
+        .logo
+            font-size: 20px
+            font-family: $title_font
+        .nav
+            font-size: 12px
+            display: flex
+            &_item
+                list-style-type: none
+                margin-left: 33px
+                transition: text-decoration 2s
+                &:hover
+                    text-decoration: underline
+
+.container_simplicity
+    width: 50%
+    margin-bottom: 386px
+    .simplicity_title
+        font-size: 50px
+        font-family: $title_font
+    .simplicity_subtitle
+        font-size: 38px
+        font-weight: 300
+
+.container-title-descr
+    margin-bottom: 112px
+    h2
+        margin-bottom: 18px
+        @include title
+    .description
+        @include descr
+
+.container-images-first
+    display: flex
+    justify-content: space-between
+    .watch_img
+        width: 35%
+        height: 352px
+        background-image: url(../images/inspiration/watch.jpg)
+        @include text_position_buttom
+    .bicycle_img
+        width: 64%
+        height: 352px
+        background-image: url(../images/inspiration/bicycle.jpg)
+        @include text_position_buttom
+
+.container-second-and-third
+    display: flex
+    justify-content: space-between
+    .container-images-second
+        width: 28%
+        height: 716px
+    .woman_img
+        background-image: url(../images/inspiration/woman.jpg)
+        background-size: cover
+        height: 100%
+        @include text_position_buttom
+
+.container-images-third
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 71%
+    .laptop_img
+        width: 50%
+        height: 352px
+        background-image: url(../images/inspiration/laptop.jpg)
+        background-size: cover
+        @include text_position_buttom
+    .children_img
+        width: 49%
+        height: 352px
+        background-image: url(../images/inspiration/children.jpg)
+        background-size: cover
+        @include text_position_buttom
+    .gadgets_img
+        width: 100%
+        height: 352px
+        background-image: url(../images/inspiration/gadgets.jpg)
+        background-size: 101%
+        @include text_position_buttom
+
+.margin_title_descr
+    margin-top: 228px
+    margin-bottom: 228px
+
+.wrapper
+    &-ground
+        display: flex
+.blog-item
+.blog_img
+    &_title
+        font-size: 20px
+        font-family: $title_font
+        margin-top: 22px
+        margin-bottom: 15px
+    &_descr
+        color: #808080
+        font-size: 15px
+        width: 80%
+        margin-bottom: 44px
+    &_date
+        color: #808080
+        font-size: 13px
+
+.nav-blog
+    margin-top: 72px
+    display: flex
+    justify-content: center
+    .nav_blog_circle
+        width: 14px
+        height: 14px
+        background-color: #d8d8d8
+        border-radius: 100%
+        opacity: .5
+        margin-left: 20px
+        &:first-child
+            margin-left: 0
+    .active
+        opacity: 1
+
+.container
+    &-footer
+        display: flex
+        flex-wrap: wrap
+        background-color: #000000
+        height: 201px
+
+    &-subscribe
+        width: 100%
+        font-size: 16px
+        height: 23px
+        padding-top: 10rem
+    &-form-rights
+        display: flex
+        width: 100%
+        height: 48px
+        justify-content: space-between
+        align-items: center
+
+.form
+
+    .form_style
+        position: relative
+        width: 350px
+        padding: 12px 20px
+        box-sizing: border-box
+        background-color: #fff
+        font-size: 16px
+    .send_email
+        position: absolute
+        left: 26rem
+        width: 60px
+        height: 41.7px
+        background-color: #fff
+        bottom: 0
+.rights
+    font-size: 15px
