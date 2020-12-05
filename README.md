@@ -1,1 +1,2 @@
-this is MINIMAL landing page
+permalink: /index.html
+this is MINIMAL landing
