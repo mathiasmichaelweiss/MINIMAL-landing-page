@@ -30,6 +30,7 @@ a {
   max-width: 1156px;
   margin: 0 auto;
   padding: 0 15px 0 15px;
+  overflow: hidden;
 }
 
 .container_nav {
@@ -250,7 +251,7 @@ a {
 }
 
 .blog_img {
-  width: 100%;
+  overflow: hidden;
 }
 
 .blog_img_title {
