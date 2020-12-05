@@ -214,7 +214,7 @@ a {
   width: 100%;
   height: 352px;
   background-image: url(../images/inspiration/gadgets.jpg);
-  background-size: 101%;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
