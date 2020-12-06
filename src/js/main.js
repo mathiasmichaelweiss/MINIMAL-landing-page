@@ -17,18 +17,33 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    var slider = tns({
-        "container": ".wrapper-ground",
-        "items": 3,
-        "slideBy": "page",
-        "mouseDrag": true,
-        "swipeAngle": false,
-        "speed": 400,
-        "gutter": 15,
-        "slideBy": 1,
-        "controlsContainer": document.querySelector('.nav-blog'),
-        "mouseDrag": true
-    });
+
+
+    if (document.body.clientWidth <= 420) {
+        var slider = tns({
+            "container": ".wrapper-ground",
+            "items": 1,
+            "slideBy": "page",
+            "mouseDrag": true,
+            "swipeAngle": false,
+            "speed": 400,
+            "gutter": 15,
+            "slideBy": 1,
+            "controlsContainer": document.querySelector('.nav-blog')
+        });
+    } else {
+        var slider = tns({
+            "container": ".wrapper-ground",
+            "items": 3,
+            "slideBy": "page",
+            "mouseDrag": true,
+            "swipeAngle": false,
+            "speed": 400,
+            "gutter": 15,
+            "slideBy": 1,
+            "controlsContainer": document.querySelector('.nav-blog')
+        });
+    }
 
 
 });

@@ -96,28 +96,39 @@ a
 
 .container-images-first
     display: flex
+    flex-wrap: wrap
     justify-content: space-between
     .watch_img
         width: 35%
         height: 352px
         background-image: url(../images/inspiration/watch.jpg)
+        @media (max-width: 420px)
+            width: 100%
         @include text_position_buttom
     .bicycle_img
         width: 64%
         height: 352px
         background-image: url(../images/inspiration/bicycle.jpg)
+        @media (max-width: 420px)
+            width: 100%
         @include text_position_buttom
 
 .container-second-and-third
     display: flex
     justify-content: space-between
+    @media (max-width: 420px)
+        flex-wrap: wrap
     .container-images-second
         width: 28%
         height: 716px
+        @media (max-width: 420px)
+            width: 100%
     .woman_img
         background-image: url(../images/inspiration/woman.jpg)
         background-size: cover
         height: 100%
+        @media (max-width: 420px)
+            width: 100%
         @include text_position_buttom
 
 .container-images-third
@@ -125,23 +136,31 @@ a
     justify-content: space-between
     flex-wrap: wrap
     width: 71%
+    @media (max-width: 420px)
+        width: 100%
     .laptop_img
         width: 50%
         height: 352px
         background-image: url(../images/inspiration/laptop.jpg)
         background-size: cover
+        @media (max-width: 420px)
+            width: 100%
         @include text_position_buttom
     .children_img
         width: 49%
         height: 352px
         background-image: url(../images/inspiration/children.jpg)
         background-size: cover
+        @media (max-width: 420px)
+            width: 100%
         @include text_position_buttom
     .gadgets_img
         width: 100%
         height: 352px
         background-image: url(../images/inspiration/gadgets.jpg)
         background-size: cover
+        @media (max-width: 420px)
+            width: 100%
         @include text_position_buttom
 
 .margin_title_descr
@@ -184,6 +203,8 @@ a
     margin-top: 25px
     display: flex
     justify-content: space-between
+    @media (max-width: 768px)
+        right: 0
 
     .nav_prev
         background-image: url(../icons/prev.svg)
@@ -194,6 +215,8 @@ a
         background-image: url(../icons/next.svg)
         margin-left: 59rem
         @include slider_nav
+        @media (max-width: 768px)
+            margin-left: 0
 
 .container
     &-footer
@@ -201,13 +224,14 @@ a
         flex-wrap: wrap
         background-color: #000000
         height: 201px
-
     &-subscribe
         width: 100%
         font-family: $title_font
         font-size: 16px
         height: 23px
         padding-top: 10rem
+        @media (max-width: 550px)
+            padding-top: 6rem
     &-form-rights
         display: flex
         flex-wrap: wrap
@@ -216,23 +240,35 @@ a
         justify-content: space-between
         align-items: center
 
-.form
-    width: 50%
-    .form_style
-        position: relative
-        width: 350px
-        padding: 12px 20px
-        box-sizing: border-box
-        background-color: #fff
-        font-size: 16px
-    .send_email
-        position: absolute
-        left: 26rem
-        width: 60px
-        height: 41.7px
-        background-color: #fff
-        bottom: 0
-.rights
-    width: 50%
-    text-align: right
-    font-size: 15px
+.container-form-rights
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    .form
+        width: 50%
+        .form_style
+            position: relative
+            width: 350px
+            padding: 12px 20px
+            box-sizing: border-box
+            background-color: #fff
+            font-size: 16px
+            @media (max-width: 721px)
+                width: 200px
+        .send_email
+            position: absolute
+            left: 26rem
+            width: 60px
+            height: 41.7px
+            background-color: #fff
+            bottom: 0
+            @media (max-width: 721px)
+                left: 15rem
+    .rights
+        width: 50%
+        text-align: right
+        font-size: 15px
+        @media (max-width: 550px)
+            width: 100%
+            margin-top: 1rem
+            text-align: left
