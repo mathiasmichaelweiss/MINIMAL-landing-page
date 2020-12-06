@@ -1,39 +1,33 @@
 'use strict';
 
 window.addEventListener('DOMContentLoaded', () => {
-    console.log(document.querySelectorAll('.active'));
 
-    function activateElem(chooseElem, activeClass) {
-        const elem = document.querySelectorAll(chooseElem);
+    const anchors = document.querySelectorAll('a[href*="#"]');
+    console.log(anchors);
 
-        elem.forEach((item, i) => {
-            item.addEventListener('click', (e) => {
-                e.preventDefault();
-                for (i = 0; i < elem.length; i++) {
-                    if (elem[i].classList.contains(activeClass)) {
-                        elem[i].classList.remove(activeClass);
-                    }
-                    item.classList.add(activeClass);
-                }
+    for (let anchor of anchors) {
+        anchor.addEventListener('click', (e) => {
+            e.preventDefault();
+            const blockID = anchor.getAttribute('href').substr(1);
+
+            document.getElementById(blockID).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             });
         });
     }
 
-    activateElem('.nav_blog_circle', 'active');
-
-
-
     var slider = tns({
-        "container": "#base",
+        "container": ".wrapper-ground",
         "items": 3,
         "slideBy": "page",
         "mouseDrag": true,
         "swipeAngle": false,
         "speed": 400,
-        gutter: 15,
-        slideBy: 1,
-        controlsContainer: document.querySelector('.nav-blog')
-
+        "gutter": 15,
+        "slideBy": 1,
+        "controlsContainer": document.querySelector('.nav-blog'),
+        "mouseDrag": true
     });
 
 
