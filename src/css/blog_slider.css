@@ -1,0 +1,22 @@
+.btn-prev {
+    background-color: #fff;
+    /* Green background /
+    border: 1px solid $shadow;
+    / Green border /
+    color: white;
+    / White text /
+    padding: 5px 10px;
+    / Some padding /
+    cursor: pointer;
+    }
+    .btn-next{
+    background-color: $secondary;
+    / Green background /
+    border: 1px solid $shadow;
+    / Green border /
+    color: white;
+    / White text /
+    padding: 5px 10px;
+    / Some padding */
+    cursor: pointer;
+}

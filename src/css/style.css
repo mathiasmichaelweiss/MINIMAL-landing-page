@@ -27,6 +27,8 @@ a {
 }
 
 .container {
+  position: relative;
+  z-index: 0;
   max-width: 1156px;
   margin: 0 auto;
   padding: 0 15px 0 15px;
@@ -230,76 +232,87 @@ a {
   margin-bottom: 228px;
 }
 
-.wrapper-ground {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.wrapper {
+  position: relative;
+  z-index: 1;
 }
 
 .blog-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 33.333%;
-  margin-left: 1%;
+  overflow: hidden;
+  padding: 0 0.7rem 0 0.7rem;
 }
 
-.blog-item:first-child {
-  margin-left: 0;
-}
-
-.blog_img {
+.blog-item .blog_img {
+  height: 430px;
   overflow: hidden;
 }
 
-.blog_img_title {
+.blog-item .blog_img_title {
   font-size: 20px;
   font-family: "Lateef", cursive;
   margin-top: 22px;
   margin-bottom: 15px;
 }
 
-.blog_img_descr {
+.blog-item .blog_img_descr {
   color: #808080;
   font-size: 15px;
   width: 80%;
   margin-bottom: 44px;
 }
 
-.blog_img_date {
+.blog-item .blog_img_date {
+  width: 100%;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  text-align-last: left;
   color: #808080;
   font-size: 13px;
 }
 
 .nav-blog {
-  margin-top: 72px;
+  position: absolute;
+  z-index: 3;
+  top: -0.8rem;
+  left: -0.3rem;
+  width: 100%;
+  margin-top: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.nav-blog .nav_blog_circle {
-  width: 14px;
-  height: 14px;
-  background-color: #d8d8d8;
-  border-radius: 100%;
-  opacity: .5;
-  margin-left: 20px;
+.nav-blog .nav_prev {
+  background-image: url(../icons/prev.svg);
+  margin-left: 1rem;
+  width: 4rem;
+  height: 30.7rem;
+  background-repeat: no-repeat;
+  background-position: 0.5rem 13.5rem;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
 }
 
-.nav-blog .nav_blog_circle:first-child {
-  margin-left: 0;
+.nav-blog .nav_prev:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
-.nav-blog .active {
-  opacity: 1;
+.nav-blog .nav_next {
+  background-image: url(../icons/next.svg);
+  margin-left: 59rem;
+  width: 4rem;
+  height: 30.7rem;
+  background-repeat: no-repeat;
+  background-position: 0.5rem 13.5rem;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+.nav-blog .nav_next:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .container-footer {
@@ -314,6 +327,7 @@ a {
 
 .container-subscribe {
   width: 100%;
+  font-family: "Lateef", cursive;
   font-size: 16px;
   height: 23px;
   padding-top: 10rem;
